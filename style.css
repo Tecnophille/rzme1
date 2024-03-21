@@ -89,6 +89,20 @@ Main Color : #2568ef
   margin-right: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
+
+@media (max-width: 576px) {
+  .years-experience-button, .years-experience-circle {
+    margin-bottom: 10px; /* Adds space between items on smaller screens */
+  }
+  .years-experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .years-experience-circles {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .numbered-circle {
   display: inline-flex; /* Use flexbox for better centering */
   justify-content: center; /* Center horizontally */
@@ -100,7 +114,7 @@ Main Color : #2568ef
   text-align: center;
   color: blue;
   border: 2px solid blue;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-right: 5px;
 }
 
