@@ -698,6 +698,11 @@ header nav.navbar.border.bootsnav.navbar-fixed.no-background ul li a {
   margin-left: 3px;
 }
 
+headerr nav.navbar.border.bootsnav.navbar-fixed.no-background ul li a {
+  position: relative;
+  z-index: 1;
+  margin-left: 3px;
+}
 header nav.navbar.border.bootsnav.navbar-fixed.no-background .attr-nav ul li a {
   border: medium none;
 }
@@ -745,6 +750,10 @@ nav.bootsnav.navbar-default.info-topbar ul li a {
   padding: 35px 0;
 }
 
+nav.bootsnav.navbar-defaultt.info-topbar ul li a {
+  margin-right: -30px;
+  padding: 35px 0;
+}
 nav.bootsnav.navbar-default.info-topbar.active-full ul li a {
   margin-right: 0;
   padding: 35px 20px;
@@ -772,7 +781,28 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   -ms-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
 }
-
+.sidebar {
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  background: #f4f4f4;
+  padding: 20px;
+  overflow-y: auto;
+}
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+  .main-content {
+      margin-left: 0;
+  }
+}
 .attr-nav.social li a {
   border: 1px solid #f4f4f4;
   -webkit-border-radius: 50%;
