@@ -782,6 +782,26 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   -o-transition: all 0.35s ease-in-out;
 }
 
+.edit-icon, .dropdown-toggle {
+  cursor: pointer;
+}
+.image-section {
+  position: relative;
+}
+.edit-section, .more-options-section {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+}
+.edit-section {
+  left: 0;
+}
+.more-options-section {
+  right: 0;
+}
+.dropdown-menu {
+  right: 0; /* Align dropdown to the right */
+}
 .card {
   border: none;
   padding: 10px 50px;

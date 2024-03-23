@@ -70,39 +70,44 @@
 </header>
 <!-- End Header -->
 <br><br><br><br><br><br><br>
-<div class="container-fluid">
+<div class="container">
     
-    <h2 class="text-center">What job are you applying for?</h2>
-   
-  
+    <h2 class="text-left">Review My Resume</h2>
+    <p class="text-left">Please review and edit your resume as needed, then download or share it with potential employers. </p>
     <div class="container">
-        <form action="" method="POST" class="contact-form">
-            <div class="row">
-                <div class="col">
-                  
-                  <div class="form-group">
-                    <label for="Position">Position</label>
-                    <input type="text" id="Position" class="form-control" placeholder="Product Manager">
-                    <span class="alert-error"></span>
-                </div>
-                          <div class="form-group">
-                            <label for="Company">Company</label>
-                              <input class="form-control" id="name" name="name" placeholder="Product Manager">
-                              <span class="alert-error"></span>
-                          </div>
-                </div>
+        <div class="row align-items-center mb-2">
+            <!-- Edit Name on the left -->
+            <div class="col d-flex align-items-left">
+                <i class="fas fa-edit me-2"></i>
+                <span>Edit Name</span>
             </div>
-      </form>
+            <!-- More Options dropdown on the right -->
+            <div class="col-auto align-self-right">
+                
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        More Options
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                        <li><a class="dropdown-item" href="#">Option 4</a></li>
+                        <li><a class="dropdown-item" href="#">Option 5</a></li>
+                    </ul>
+            </div>
+        </div>
+        <!-- Image below the Edit Name and More Options -->
+        <div class="row">
+            <div class="col">
+                <img src="assets/img/resume.png" class="img-fluid" alt="Resume">
+            </div>
+        </div>
     </div>
+    
     
      </div>
 
 <br>
-<!-- Navigation Buttons with Inline Style for Correct Positioning -->
-<div style="display: flex; justify-content: space-between; padding: 0 10%;">
-    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary"><span><</span>Previous</button>
-    <button style="background-color:#0052C1;" type="button" class="btn btn-primary">Next <span>></span></button>
-</div>
 
 
 
