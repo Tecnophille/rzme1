@@ -39,7 +39,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
     
         
-        
 </head>
 <body>
 <!-- Header 
@@ -87,46 +86,43 @@
 </header>
 <!-- End Header -->
 <br><br><br><br><br><br><br>
-<div class="container-fluid">
-    <div class="progress-container">
-      <div class="progress-step">
-        <span class="step-circle ">1</span>
-        <span class="step-text">Target Jobs</span>
-      </div>
-      <div class="progress-step">
-        <span class="step-circle">2</span>
-        <span class="step-text">Background</span>
-      </div>
-      <div class="progress-step">
-        <span class="step-circle current">3</span>
-        <span class="step-text">Work Style</span>
-      </div>
-      <div class="progress-step">
-        <span class="step-circle">4</span>
-        <span class="step-text">Finalize</span>
+
       </div>
     </div>
-    <h2 class="text-center">How many years of experience do you have?</h2>
-    <p class="text-center">You can include internships, unofficial jobs, or volunteer work.</p>
+    <h2 class="text-center">Choose your top 3 strengths</h2>
+    <p class="text-center">We'll emphasize these points in your cover letter to align your strengths with the requirements of the position.</p>
   
-    <div class="years-experience-container">
-      <button class="years-experience-button">Less than one</button>
-      <div class="years-experience-circles">
-        <span class="years-experience-circle">1</span>
-        <span class="years-experience-circle">2</span>
-        <span class="years-experience-circle">3</span>
-        <span class="years-experience-circle">4</span>
-        <span class="years-experience-circle">5</span>
-        <span class="years-experience-circle">6</span>
-        <span class="years-experience-circle">7</span>
-        <span class="years-experience-circle">8</span>
-        <span class="years-experience-circle">9</span>
-        <span class="years-experience-circle">10+</span>
-      </div>
+    <div class="container-fluid text-center py-4">
+        <!-- First Row: 3 Boxes -->
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="soft-skill-box">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box">Soft Skill<i class="plus-sign">+</i></div>
+        </div>
+    
+        <!-- Second & Third Row: 4 Boxes Each -->
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box four-in-row">Soft Skill<i class="plus-sign">+</i></div>
+        </div>
+    
+        <!-- Fourth Row: 3 Boxes -->
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="soft-skill-box">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box">Soft Skill<i class="plus-sign">+</i></div>
+            <div class="soft-skill-box">Soft Skill<i class="plus-sign">+</i></div>
+        </div>
     </div>
-     
-</div>
-<br><br><br><br>
+    
+
 <!-- Navigation Buttons with Inline Style for Correct Positioning -->
 <div style="display: flex; justify-content: space-between; padding: 0 10%;">
     <button  style="background-color:#0052C1;" type="button" class="btn btn-primary"><span><</span>Previous</button>
@@ -150,5 +146,12 @@
     <script src="assets/js/jquery.backgroundMove.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.soft-skill-box').forEach(box => {
+        box.addEventListener('click', function() {
+            this.classList.toggle('selected');
+        });
+    });
+    </script>
 </body>
 </html>
