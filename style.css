@@ -782,6 +782,84 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   -o-transition: all 0.35s ease-in-out;
 }
 
+.card {
+  border: none;
+  padding: 10px 50px;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.card::after {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.price-details {
+  list-style-type: disc; /* or 'circle' depending on your preference */
+  padding-left: 20px; 
+  text-align: left;
+}
+
+.price-details {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Adjust as needed */
+}
+
+.price-details li {
+  position: relative;
+  padding-left: 40px; /* Make room for the image icon */
+  margin-bottom: 10px; /* Space between items */
+}
+
+
+.price-details li.download::before,
+.price-details li.cover-letter::before,
+.price-details li.refund::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px; /* Size of your icon */
+  height: 24px; /* Size of your icon */
+  background-size: cover;
+}
+
+.price-details li.download::before {
+  background-image: url('assets/img/enter.png');
+}
+
+.price-details li.cover-letter::before {
+  background-image: url('assets/img/builder.png');
+}
+
+.price-details li.refund::before {
+  background-image: url('assets/img/customer.png');
+}
+
+
+.card:hover, .card.auto-selected{
+
+
+  transform: scale(1.02, 1.02);
+  -webkit-transform: scale(1.02, 1.02);
+  backface-visibility: hidden; 
+  will-change: transform;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover .btn-outline-primary {
+  color:white;
+  background:#007bff;
+}
+
 .content-container {
   display: flex;
   flex-wrap: wrap;
