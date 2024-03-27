@@ -782,6 +782,46 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   -o-transition: all 0.35s ease-in-out;
 }
 
+.color-circles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap between rows */
+}
+
+.spread-text {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.spread-text span {
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+@media (max-width: 576px) {
+  .spread-text {
+      flex-direction: column;
+      align-items: center;
+  }
+  .spread-text span {
+      margin-bottom: 0.5rem; /* Adds some space between the spans on smaller screens */
+  }
+}
+
+
+.color-circles-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between circles */
+}
+
+.color-circle {
+  width: 30px; /* Circle size */
+  height: 30px; /* Circle size */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
 .edit-icon, .dropdown-toggle {
   cursor: pointer;
 }
