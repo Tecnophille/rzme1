@@ -974,6 +974,89 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
 }
 
 
+
+.progressnew {
+  position: relative;
+  width: auto;
+  margin: 280px auto; 
+  padding: 10px 10px;
+  border-radius:10px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.Loading {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Loading:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  animation: load 5s infinite;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+    background: #0052C1;
+  }
+  
+  25% {
+    width: 40%;
+    background: #0052C1;
+  }
+  
+  50% {
+    width: 60%;
+    background: #0f6ae9;
+  }
+  
+  75% {
+    width: 75%;
+    background: #0157cf;
+  }
+  
+  100% {
+    width: 100%;
+    background: #0264ee;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background: #0052C1;
+  }
+  
+  25% {
+    background: #0052C1;
+  }
+  
+  50% {
+    background: #0052C1;
+  }
+  
+  75% {
+    background: #0052C1;
+  }
+  
+  100% {
+    background: #0052C1;
+  }
+}
+
 .option-boxes {
   display: flex;
   justify-content: space-around;
@@ -981,6 +1064,33 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   gap: 20px; 
 }
 
+.file-upload-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.file-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.file-info {
+  width: calc(100% - 63px);
+}
+
+.file-name {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+
+.file-size {
+  font-weight: normal;
+  color: #666;
+}
 
 .white-box {
   background-color: #fff;

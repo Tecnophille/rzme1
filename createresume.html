@@ -25,6 +25,10 @@
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- ========== End Stylesheet ========== -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -93,63 +97,58 @@
             </div>
             
             <div class="white-box">
-                <h4>Currently Uploading</h4>
-                <!-- First Upload Item -->
-                <div class="file-upload-item">
-                    <img src="assets/img/pdf.svg" alt="PDF" class="file-icon">
-                    <div class="file-info">
-                        <span class="file-name">johndoe.pdf <small class="file-size">4MB</small></span>
-                        <div class="progress" style="height: 20px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Second Upload Item -->
-                <div class="file-upload-item">
-                    <img src="assets/img/txt.svg" alt="TXT" class="file-icon">
-                    <div class="file-info">
-                        <span class="file-name">johndoe.txt <small class="file-size">3MB</small></span>
-                        <div class="progress" style="height: 20px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Third Upload Item -->
-                <div class="file-upload-item">
-                    <img src="assets/img/document.svg" alt="DOC" class="file-icon">
-                    <div class=" file-info">
-                        <span class="file-name">johndoe.doc <small class="file-size">5MB</small></span>
-                        <div class="progress" style="height: 20px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                           </div>
-                           <br><small style="text-align: right;">97kb</small>
-                        </div>
-                          
-                    </div>
-                </div>
-                <!-- Fourth Upload Item -->
-                <div class="file-upload-item">
-                    <img src="assets/img/document.svg" alt="DOCX" class="file-icon">
-                    <div class="file-info">
-                        <span class="file-name">johndoe.docx <small class="file-size">6MB</small></span>
-                        <div class="progress" style="height: 20px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
+                <h4>Upload</h4><br>
+                <img src="assets/img/pdf.svg" alt="Upload" style="width: 48px; height: 48px;">
+                <img src="assets/img/txt.svg" alt="Upload" style="width: 48px; height: 48px;">
+                <img src="assets/img/document.svg" alt="Upload" style="width: 48px; height: 48px;"><br>
+                <br><p><b>Files can be read:</b> PDF, TXT, DOC</p>
             </div>
-            
+        </div>
         
     </div>
     
      </div>
 
+     <!-- Trigger/Open The Modal Button -->
+<button id="openModalBtn" type="button" class="btn btn-info" style="display: none;">Open Modal</button>
+
+<!-- The Modal -->
+<div class="modal fade" id="fileUploadModal" tabindex="-1" role="dialog" aria-labelledby="fileUploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center" style="position: relative;">
+          <img src="assets/img/resume.png" alt="Resume" style="width: 50%; height: auto; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
+          <div class="container"><div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgb(0, 0, 0); font-size: 20px; font-weight: bold;">
+            
+            <div class="progressnew">
+                <small class="text-left">Applying Template</small> 
+                <div class="Loading"></div>
+              </div>
+            </div>
+          </div>
+                    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
 <br><br><br>
 <!-- Navigation Buttons with Inline Style for Correct Positioning -->
 <div style="display: flex; justify-content: space-between; padding: 0 10%;">
     <button  style="background-color:#0052C1;" type="button" class="btn btn-primary"><span><</span>Previous</button>
     <button style="background-color:#0052C1;" type="button" class="btn btn-primary">Next <span>></span></button>
 </div>
+
+
 <br><br>
 <div><p class="text-center">By clicking, you agree to our terms and privacy policy</p></div>
 <br>
@@ -158,6 +157,13 @@
 
 <!-- jQuery Frameworks
     ============================================= -->
+
+    <script>
+        $(document).ready(function(){
+            $("#fileUploadModal").modal('show');
+        });
+        </script>
+        
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/equal-height.min.js"></script>
