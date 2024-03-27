@@ -978,8 +978,9 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust gap between boxes as needed */
+  gap: 20px; 
 }
+
 
 .white-box {
   background-color: #fff;
@@ -1011,7 +1012,19 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   box-sizing: border-box; /* Include padding in the box's width */
   margin: 20px 0; /* Space above and below the box */
 }
+@media (max-width: 768px) {
+  .white-box {
+    width: calc(50% - 8px); /* Makes two boxes fit per row on smaller screens */
+    margin-bottom: 20px; /* Ensure there's space between rows of boxes */
+  }
+}
 
+/* Media query for very small screens, typically phones in portrait mode */
+@media (max-width: 480px) {
+  .white-box {
+    width: 100%; /* Each box takes full width on very small screens */
+  }
+}
 .soft-skill-box {
     flex: 0 1 auto; 
     margin-right: 20px; 
