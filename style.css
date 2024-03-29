@@ -943,6 +943,53 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   margin-bottom: 20px;
 }
 
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  flex-wrap: wrap;
+}
+
+.header-flex h3, .header-flex .icon-text p {
+  margin: 0; 
+}
+
+.icon-text {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .header-flex {
+      flex-direction: column; /* Stacks them vertically on smaller screens */
+  }
+
+  .icon-text {
+      justify-content: center; /* Centers the icons text when stacked */
+  }
+}
+
+
+.form-container {
+  background: #FFFFFF; /* Light background for the form */
+  padding: 20px; /* Spacing inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0; /* Space above and below the form */
+}
+
+.form-control {
+  border-radius: 5px; /* Rounded corners for form fields */
+  border: 1px solid #ced4da; /* Consistent border */
+  padding: .375rem .75rem; /* Padding inside input fields */
+}
+
+.form-control:focus {
+  border-color: #4D90FE; /* Highlight color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(77, 144, 254, 0.25); /* Subtle glow effect */
+}
+
 .image-gallery {
   flex: 3 1 600px;
 }
@@ -973,6 +1020,97 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   }
 }
 
+
+
+@media (max-width: 768px) {
+  #sidebar, #li {
+    position: fixed;
+    left: -250px; 
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    display: none;
+    transition: left 0.3s ease-in-out;
+   
+    z-index: 1000;
+    display: none;
+    color: white;
+  }
+
+  #sidebar.show {
+    left: 0;
+    
+  }
+
+  .overlay  {
+    display: none; 
+    position: fixed;
+    width: 50vw;
+    color: white;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  
+    
+  }
+
+  .overlay.visible {
+    display: block;
+  }
+}
+
+
+
+.contenter {
+  padding: 10px;
+  padding-top: 20px; 
+
+  margin-left: 0;
+}
+
+
+/* Ensure proper spacing between content and sidebar on larger screens */
+@media (min-width: 768px) {
+  .contenter {
+    margin-left: 190px; /* Space for sidebar */
+  }
+}
+
+.sidebar ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li  {
+  margin-bottom: 20px;
+  
+}
+.sidebar-header {
+  margin-bottom: 20px; 
+}
+
+.sidebar p {
+  margin-bottom: 0; 
+}
+
+
+.sidebar ul li strong {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white; /* White circle border */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+  margin-right: 10px;
+}
+
+.activee {
+  color: rgb(1, 39, 255);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid white;
+  border-radius: 50%;
+}
 
 
 .progressnew {
@@ -1053,7 +1191,7 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   }
   
   100% {
-    background: #0052C1;
+    background: #494d5f;
   }
 }
 
