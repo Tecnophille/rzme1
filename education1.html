@@ -30,48 +30,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
     
+  
         
+         
         
 </head>
 <body>
-   
-   
-
-       <div class="d-flex flex-column flex-md-row">
-        <div class="container-fluid">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="sidebarToggle">
-            <i class="fa fa-bars"></i>
-          </button>
-          
-        </div> 
-      
-        <div style="background-color: #0052C1;" id="sidebar" class="sidebar text-white bg-blue d-flex flex-md-column collapse show  offcanvas offcanvas-right"> <div class="sidebar-header">
-            <img src="assets/img/rezmi.png" alt="Logo" class="img-fluid" style="max-width: 200px; margin: 0 auto;">
-          </div>
-          <ul class="nav flex-column">
-            <li class=" active nav-item"><a href="#" class="nav-link text-white "><strong class="activee">1</strong>Heading</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white"><strong>2</strong> Work History</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white"><strong>3</strong> Education</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white"><strong>4</strong> Skills</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white"><strong>5</strong> Summary</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white"><strong>6</strong> Conclude</a></li>
-          </ul>
-          <ul class="nav flex-column mt-auto">
-            <li class="nav-item"><a href="#" class="nav-link text-white">TERMS AND CONDITION</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">PRIVACY POLICY</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">ACCESSIBILITY</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">CONTACT US</a></li>
-          </ul>
-          <p class="text-center mt-auto mb-0">
-            Copyright 2023. All rights reserved
-          </p>
-        </div>
-        
-      </div>
-      
-       
-      </div>
-      <div class="overlay"></div>
       <div class="container "><br>
         <div class="contenter">
             <div class="header-flex">
@@ -156,7 +120,9 @@
                 </div>
             </div>
     <br>
-
+    <div class="text-center">
+    <button type="button" id="addMore" class="btn btn-success" >Add More</button>
+</div>
      </div> 
     </div>
     <div class="container">
@@ -170,37 +136,67 @@
     
 </div>
 <script>
-   document.addEventListener('DOMContentLoaded', function() {
-  var sidebarToggle = document.querySelector('.navbar-toggle');
-  var sidebar = document.getElementById('sidebar');
-  var overlay = document.querySelector('.overlay');
-
-  sidebarToggle.addEventListener('click', function() {
-    sidebar.classList.toggle('show');
-    overlay.classList.toggle('visible');
-  });
-
-  // Ensure sidebar is not initially visible on mobile
-  if (window.innerWidth <= 768) {
-    sidebar.classList.remove('show'); // Remove the 'show' class if present
-  }
-
-  // Close sidebar on outside click (mobile only)
-  document.addEventListener('touchend', function(event) {
-    if (window.innerWidth <= 768 && sidebar.classList.contains('show') && !event.target.closest('#sidebar')) {
-      sidebar.classList.remove('show');
-      overlay.classList.remove('visible');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load forms from local storage on page load
+        loadForms();
+    
+        document.getElementById('addMore').addEventListener('click', function() {
+            addForm();
+            saveForms();
+        });
+    });
+    
+    function addForm(data = {}) {
+        var original = document.querySelector('.form-container');
+        var clone = original.cloneNode(true); // Clone the form-container
+    
+        // Optionally fill the form with data
+        if (data.id) {
+            clone.dataset.id = data.id; // Assign a unique identifier to each form
+        } else {
+            clone.dataset.id = Date.now(); // Use timestamp as a unique identifier
+        }
+    
+        // Add a delete button to the cloned form
+        var deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '<i class="fas fa-trash"></i>'; // Assuming you're using FontAwesome for icons
+        deleteButton.className = 'btn btn-danger deleteBtn';
+        deleteButton.type = 'button';
+        clone.insertBefore(deleteButton, clone.firstChild); // Insert the delete button at the beginning of the form
+    
+        // Append the cloned form to the parent container
+        original.parentNode.appendChild(clone);
+    
+        // Add an event listener to the delete button to remove the cloned form and save the updated state
+        deleteButton.addEventListener('click', function() {
+            this.parentNode.remove();
+            saveForms();
+        });
     }
-  });
-
-  overlay.addEventListener('click', function() {
-    sidebar.classList.remove('show');
-    this.classList.remove('visible');
-  });
-});
- 
-
+    
+    function saveForms() {
+        var forms = document.querySelectorAll('.form-container');
+        var formsData = [];
+        forms.forEach(function(form, index) {
+            if (index > 0) { // Skip the first form since it's the template
+                formsData.push({id: form.dataset.id});
+            }
+        });
+        localStorage.setItem('forms', JSON.stringify(formsData));
+    }
+    
+    function loadForms() {
+        var savedForms = localStorage.getItem('forms');
+        if (savedForms) {
+            JSON.parse(savedForms).forEach(function(form) {
+                addForm(form);
+            });
+        }
+    }
     </script>
+    
+    
+    
     
 <!-- jQuery Frameworks
     ============================================= -->

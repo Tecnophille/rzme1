@@ -943,7 +943,11 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   margin-bottom: 20px;
 }
 
-
+.delete-button-container {
+  text-align: right; 
+  margin-top: 30px; 
+  clear: both; 
+}
 .header-flex {
   display: flex;
   align-items: center;
