@@ -1,12 +1,6 @@
 /*
     Table of Contents
 
-    Name                 : JOBICK
-    Author               : DexignLab
-    Author Portfolio     : https://themeforest.net/user/dexignlab/portfolio
-    
-
-
     Table of Sass Contents
 
     1. Abstracts
@@ -74,19 +68,19 @@
 @import url(./../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
 @import url(./../vendor/metismenu/css/metisMenu.min.css);
 :root {
-  --primary: #F93A0B;
+  --primary: #2568ef;
   --secondary: #145650;
-  --primary-hover: #cc2c05;
-  --primary-dark: #681703;
-  --rgba-primary-1: rgba(249, 58, 11, 0.1);
-  --rgba-primary-2: rgba(249, 58, 11, 0.2);
-  --rgba-primary-3: rgba(249, 58, 11, 0.3);
-  --rgba-primary-4: rgba(249, 58, 11, 0.4);
-  --rgba-primary-5: rgba(249, 58, 11, 0.5);
-  --rgba-primary-6: rgba(249, 58, 11, 0.6);
-  --rgba-primary-7: rgba(249, 58, 11, 0.7);
-  --rgba-primary-8: rgba(249, 58, 11, 0.8);
-  --rgba-primary-9: rgba(249, 58, 11, 0.9);
+  --primary-hover: #2568ef;
+  --primary-dark: #1351cc;
+  --rgba-primary-1: rgba(37, 104, 239, 0.1);
+  --rgba-primary-2: rgba(37, 104, 239, 0.2);
+  --rgba-primary-3: rgba(37, 104, 239, 0.3);
+  --rgba-primary-4: rgba(37, 104, 239, 0.4);
+  --rgba-primary-5: rgba(37, 104, 239, 0.5);
+  --rgba-primary-6: rgba(37, 104, 239, 0.6);
+  --rgba-primary-7: rgba(37, 104, 239, 0.7);
+  --rgba-primary-8: rgba(37, 104, 239, 0.8);
+  --rgba-primary-9: rgba(37, 104, 239, 0.9);
   --font-family-base: Roboto, sans-serif;
   --font-family-title: Roboto, sans-serif;
   --title: #000; }
@@ -100,10 +94,10 @@
 
 .gradient-1 {
   background: #f0a907;
-  background: -moz-linear-gradient(top, #f0a907 0%, #f53c79 100%);
-  background: -webkit-linear-gradient(top, #f0a907 0%, #f53c79 100%);
-  background: linear-gradient(to bottom, #f0a907 0%, #f53c79 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0a907', endColorstr='#f53c79',GradientType=0 ); }
+  background: -moz-linear-gradient(top, #f0a907 0%, #2568ef 100%);
+  background: -webkit-linear-gradient(top, #f0a907 0%, #2568ef 100%);
+  background: linear-gradient(to bottom, #f0a907 0%, #2568ef 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0a907', endColorstr='#2568ef',GradientType=0 ); }
 
 .gradient-2 {
   background: #4dedf5;
@@ -127,11 +121,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f25521', endColorstr='#f9c70a',GradientType=1 ); }
 
 .gradient-5 {
-  background: #f53c79;
-  background: -moz-linear-gradient(left, #f53c79 0%, #f0a907 100%);
-  background: -webkit-linear-gradient(left, #f53c79 0%, #f0a907 100%);
-  background: linear-gradient(to right, #f53c79 0%, #f0a907 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f53c79', endColorstr='#f0a907',GradientType=1 ); }
+  background: #2568ef;
+  background: -moz-linear-gradient(left, #2568ef 0%, #f0a907 100%);
+  background: -webkit-linear-gradient(left, #2568ef 0%, #f0a907 100%);
+  background: linear-gradient(to right, #2568ef 0%, #f0a907 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2568ef', endColorstr='#f0a907',GradientType=1 ); }
 
 .gradient-6 {
   background: #36b9d8;
@@ -155,11 +149,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7B00F', endColorstr='#F25521',GradientType=1 ); }
 
 .gradient-9, .datepicker.datepicker-dropdown td.day:hover, .datepicker.datepicker-dropdown th.next:hover, .datepicker.datepicker-dropdown th.prev:hover, .datepicker table tr td.selected, .datepicker table tr td.active, .datepicker table tr td.today, .datepicker table tr td.today:hover, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover {
-  background: #f31e7a !important;
-  background: -moz-linear-gradient(left, #f31e7a 0%, #fd712c 100%);
-  background: -webkit-linear-gradient(left, #f31e7a 0%, #fd712c 100%);
-  background: linear-gradient(to right, #f31e7a 0%, #fd712c 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f31e7a', endColorstr='#fd712c',GradientType=1 ); }
+  background: #2568ef !important;
+  background: -moz-linear-gradient(left, #2568ef 0%, #fd712c 100%);
+  background: -webkit-linear-gradient(left, #2568ef 0%, #fd712c 100%);
+  background: linear-gradient(to right, #2568ef 0%, #fd712c 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2568ef', endColorstr='#fd712c',GradientType=1 ); }
 
 .gradient-10 {
   background: #f25521 !important;
